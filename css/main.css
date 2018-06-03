@@ -88,6 +88,10 @@ header .overly .container {
     overflow: hidden;
 }
 
+header .overly .container .clear {
+  visibility: hidden;
+}
+
 header .overly .container > div {
     color: #efe7e7;
     border: 1px solid #efe7e7;
@@ -548,6 +552,36 @@ header .overly > i:hover {
   }
 }
 /*End testimonials*/
+/*Start Revision*/
+.revision {
+  padding: 30px 0;
+  background: #CCC;
+}
+
+.revision .container .pararea {
+  padding: 10px;
+  border-left: 3px solid yellow;
+  background: #DDD;
+  width: calc(98% /3);
+  text-align: left;
+}
+
+.revision .container .pararea:nth-of-type(2),
+.revision .container .pararea:first-of-type {
+  margin-right: 1%;
+}
+
+.revision .container .pararea h3 {
+  color: blue;
+  text-transform: uppercase;
+}
+
+.revision .container .pararea p {
+  color: #777;
+  line-height: 1.5;
+}
+
+/*End Revision*/
 /*Start My Framework*/
 .container {
     width: 70%;
