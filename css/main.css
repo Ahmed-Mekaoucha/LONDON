@@ -554,31 +554,60 @@ header .overly > i:hover {
 /*End testimonials*/
 /*Start Revision*/
 .revision {
-  padding: 30px 0;
+  padding: 1px 0 40px;
   background: #CCC;
 }
 
 .revision .container .pararea {
   padding: 10px;
-  border-left: 3px solid yellow;
+  border-left: 3px solid #3389e0;
   background: #DDD;
-  width: calc(98% /3);
   text-align: left;
 }
 
-.revision .container .pararea:nth-of-type(2),
-.revision .container .pararea:first-of-type {
-  margin-right: 1%;
+@media (min-width: 1400px) {
+  .revision .container .pararea {
+    width: calc(98% / 3);
+  }
+  .revision .container .pararea:nth-of-type(2),
+  .revision .container .pararea:first-of-type {
+    margin-right: 1%;
+  }
+}
+
+@media (min-width: 850px) and (max-width: 1399px) {
+  .revision .container .pararea:first-of-type {
+    width: 100%;
+    margin-bottom: 2%;
+  }
+  .revision .container .pararea:nth-of-type(2),
+  .revision .container .pararea:nth-of-type(3) {
+    width: 49%;
+  }
+  .revision .container .pararea:nth-of-type(2) {
+    margin-right: 2%;
+  }
+}
+@media (max-width: 850px) {
+  .revision .container .pararea {
+    margin-bottom: 2%;
+  }
 }
 
 .revision .container .pararea h3 {
-  color: blue;
+  color: #3389e0;
   text-transform: uppercase;
 }
 
 .revision .container .pararea p {
   color: #777;
   line-height: 1.5;
+}
+
+.revision .container .pararea p a {
+  color: #3389e0;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /*End Revision*/

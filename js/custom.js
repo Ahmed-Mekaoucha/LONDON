@@ -43,7 +43,11 @@ $(document).ready(function () {
         });
     });
 
-
+    // Make The length of the Paragraph The same of the small one
+    $('.revision .container .pararea p').each(function () {
+        $(this).html($(this).html().slice(0, 190) + ' <a href=\'#\'>Read More!</a>');
+        console.log($(this).text().length);
+    });
 
 
 
