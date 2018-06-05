@@ -1,6 +1,10 @@
 /*global document, window, $*/
 $(document).ready(function () {
     'use strict';
+    // Variables Start
+    var tablist = $('.information .container.bigscreen ul li'),
+        tablistS = $('.information .container.smallscreen ul li');
+    // Variables End
     // List Item show in mobile view
     $('.list-item').on('click', function () {
         $(this).toggleClass('fa-bars fa-times').next('ul').slideToggle();
@@ -46,12 +50,23 @@ $(document).ready(function () {
     // Make The length of the Paragraph The same of the small one
     $('.revision .container .pararea p').each(function () {
         $(this).html($(this).html().slice(0, 190) + ' <a href=\'#\'>Read More!</a>');
-        console.log($(this).text().length);
     });
 
 
+    // Start Tabes list
+    tablist.each(function () {
+        $(this).on('click', function () {
+            $(this).addClass('selected').siblings().removeClass('selected');
+            $('.' + $(this).text()).show().siblings('div').hide();
+        });
+    });
 
-
+    tablistS.each(function () {
+        $(this).on('click', function () {
+            $(this).next('div').slideToggle('slow');
+            $('.information .container.smallscreen div').not($(this).next('div')).slideUp('slow');
+        });
+    });
 
 
 

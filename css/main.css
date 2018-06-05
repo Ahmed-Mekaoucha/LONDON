@@ -611,6 +611,60 @@ header .overly > i:hover {
 }
 
 /*End Revision*/
+/*Start information*/
+.information {
+  padding: 1px 0 30px;
+}
+
+.information .container {
+  text-align: left;
+}
+
+.information .container ul li {
+  display: inline-block;
+  padding: 15px 20px;
+  background: #2c3e50;
+  color: #efe7e7;
+  font: 600 20px arial;
+  cursor: pointer;
+}
+
+.information .container div,
+.information .container ul li.selected {
+  background: #FFF;
+  color: #2c3e50;
+}
+
+.information .container div {
+  padding: 15px;
+  font: 18px/160% arial;
+}
+
+.information .container div::first-letter {
+  font: 600 25px arial;
+}
+
+.information .container div:not(:first-of-type) {
+  display: none;
+}
+
+@media (min-width: 920px) {
+  .information .container.smallscreen {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 919px) {
+  .information .container.bigscreen {
+    display: none;
+  }
+  .information .container.smallscreen ul li {
+    width: 100%;
+    display: block;
+  }
+}
+
+/*End information*/
 /*Start My Framework*/
 .container {
     width: 70%;
